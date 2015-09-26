@@ -7,6 +7,6 @@ More info: https://sites.google.com/site/amaliaproject/
 
 Project Coordinator: António Miguel Rosado da Cruz
 
-Main Developers: Rui Silva and Domingos Gomes
+Main Developer: Célia Sousa
 
 UI modeler Tool V1.0, July 2015
