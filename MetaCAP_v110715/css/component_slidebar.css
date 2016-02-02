@@ -1,0 +1,49 @@
+/* General styles for all menus */
+.cbp-spmenu {
+	background: #; /* mudar cinza claro*/
+	position: fixed;
+	color: #fff;
+	
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+	left: 80px;
+	display: block;
+	height: 100%;
+	bottom: 0px;
+	z-index: 1000;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.cbp-spmenu-left {
+	left: 80px;
+}
+
+.cbp-spmenu-right {
+	right: -240px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+	left: 255px;
+	bottom: 862px;
+}
+
+.cbp-spmenu-right.cbp-spmenu-open {
+	right: 0px;
+	top:50px;
+}
+
+/* Transitions */
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+	left: 80px;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UIM nome ='exemplo_2_proj' dm ='carRent.xml'>
+<InteractionSpace id='interactionspace3' text='InteractionSpace' x='253' y='135' w='500' h='400' classe='Cliente'>
+</InteractionSpace> 
+<ViewRelatedEntity id='viewrelatedentity4' text='ViewRelatedEntity' x='280' y='199' w='450' h='300' classe='Cliente'>
+</ViewRelatedEntity> 
+<ViewEntity id='viewentity5' text='ViewEntity' x='305.0000000000001' y='268' w='398.9999999999999' h='210' classe='Cliente'>
+</ViewEntity> 
+<InputOnly id='inputonly1' text='InputOnly' x='324' y='336' w='350' h='119.99999999999994' classe='Cliente' atributo='nome'>
+</InputOnly> 
+<ToCreateInstance id='tocreateinstance1' text='ToCreateInstance' x='389' y='381' w='200' h='60' classe=''>
+</ToCreateInstance> 
+</UIM>

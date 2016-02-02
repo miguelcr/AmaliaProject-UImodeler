@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>MetaCAP</title>
+
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		
+		<!-- Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+		
+		<!-- Barra horizontal menu de desenho -->
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+
+		<!-- menu da propriedades -->
+		<link rel="stylesheet" type="text/css" href="css/component_slidebar.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="css/component_slidebar.css" /> -->
+		<!-- parte do "abre e fecha do menu das proriedades -->
+		<link rel='stylesheet' type='text/css' href='css/styles_menu_propriedades.css' />
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+		<script type='text/javascript' src='js/menu_jquery.js'></script>
+
+		<!-- Ficheiros externos -->
+		<link rel="stylesheet" type="text/css" href="css/myStyles.css" />
+		
+		<script src="js/modernizr.custom.js"></script>
+        <script src="js/cbpHorizontalSlideOutMenu.min.js"></script>
+        <script src="js/paper/paper.js" type="text/javascript"></script>
+        <script src="js/editor/componentes.js" type="text/javascript"></script>
+        <script src="js/editor/aplicacao.js" type="text/javascript"></script>
+		
+		<script src="js/editor/UI.js" type="text/javascript"></script>
+		
+        <script src="js/Blob.js-master/Blob.js"></script>
+		<script src="js/FileSaver.js-master/FileSaver.js"></script>
+		<script src="js/loadxmldoc.js"></script>
+		<!--<script src="js/select.js"></script>-->
+                
+	</head>
+        
+	<body>
+            
+		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right cbp-spmenu-open" id="cbp-spmenu-s2" style="height:2px;">
+			<div id='cssmenu'>
+				<ul>
+				   <li class='last'><a  style="letter-spacing: 2px; text-transform: uppercase; width: 240px; text-shadow: rgba(0, 0, 0, 0.34902) 0px 1px 1px;" href='#'><span>Propriedades</span></a>
+                                       <div class="props"> 
+                                            <p style="float:left">Nome: <input type="text" id="txt_nome" style="width:150px" readonly></p>
+											<p style="float:left">Texto: <input type="text" id="txt_texto" style="width:150px"></p>
+                                            <p style="float:left"> W: <input type="text" id="txt_width" style="width:50px"> 
+                                                H: <input type="text" id="txt_Heigth" style="width:50px"></p>
+                                            <p style="float:left"> X: &nbsp;<input type="text" id="txt_x" style="width:50px"> 
+                                                Y: <input type="text" id="txt_y" style="width:50px"></p>
+											<p style="float:left"> Classe(.atributo): </p><p><select id="ClassesList" style="width:150px"></select></p>
+										<!--	<p style="float:left">CRUD Ops
+											<select id="CrudOps">
+												<option value="vazio"> </option>
+												<option value="create">CreateOp</option>
+												<option value="retrieve">RetrieveOp</option>
+												<option value="update">UpdateOp</option>
+												<option value="delete">DeleteOp</option>
+												<option value="link">LinkOp</option>
+												<option value="unlink">UnlinkOp</option>
+											</select></p> -->
+												<button style="float:left" class = "mybtn"  id="btn_alterar" type="button">Alterar</button>
+												<button style="float:left" class = "mybtn"  id="btn_apagar" type="button">Eliminar</button>
+                                       </div>
+				   </li>
+				</ul>
+			</div>
+		</nav>
+		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left " id="cbp-spmenu-s1">
+			<div id='projeto' style="position:fixed; top:0px; width:100%;">
+<ul>
+   <li><a href='#'>MetaCAP</a></li>
+   <li><a href='#' id="lnkLimpar">Novo</a></li>
+      <li class='active'><a href='#'>User Interface Model</a>
+      <ul>
+         <li><a href='#' id="lnkImport">Abrir UIM</a></li>
+         <li><a href='#' id="lnkExport">Guardar UIM</a></li>
+      </ul>
+      
+   </li>
+   <!--
+   <li class='active'><a href='#'>JSON</a>
+      <ul>
+         <li><a href='#' id="lnkAbrir">Abrir (só para leitura)</a></li>
+         <li><a href='#' id="lnkGuardar">Guardar</a></li>
+      </ul>
+
+   </li>
+	-->
+    <li class='active'><a href='#'>Domain Model</a>
+      <ul>
+         <li><a href='#' id="lnkAbrirMD">Adicionar DM</a></li>
+         
+      </ul>
+      
+   </li>
+   
+   <li><a href='#' id="lnkSobre">Sobre</a></li>
+</ul>
+</div>
+			
+		</nav>
+			<nav class="cbp-hsmenu-wrapper" id="cbp-hsmenu-wrapper">
+				<div class="cbp-hsinner">
+					<a class="myBtnHome" id="showLeft" href="#"></a>
+					<ul class="cbp-hsmenu">
+						<li>
+							<a href="#"><p class="rotate">InteractionSpace</p></a>
+							<ul class="cbp-hssubmenu cbp-hssub-rows" style="height:96%;">
+								<li><a><img id="newContainer" src="images/materials/container.png" alt=""/><span>InteractionSpace</span></a></li>
+								<b>InteractionBlock</b>
+								<li><a><img id="newContainer2" src="images/materials/container.png" alt=""/><span>ViewEntity</span></a></li>
+								<li><a><img id="newContainer3" src="images/materials/container.png" alt=""/><span>ViewRelatedEntity</span></a></li> 
+								<li><a><img id="newCollection" src="images/materials/collection.png" alt=""/><span>ViewList</span></a></li>
+								<li><a><img id="newCollection2" src="images/materials/collection.png" alt=""/><span>ViewRelatedList</span></a></li>
+								<li><a> <img id="newSelectableCollection" src="images/activematerials/selectable_collection.png" alt=""/><span>ViewList</span></a></li>
+								<li><a> <img id="newSelectableCollection2" src="images/activematerials/selectable_collection.png" alt=""/><span>ViewRelatedList</span></a></li>
+								<b>Menus</b>
+								<li><a> <img id="newMenuBar" src="images/activematerials/menubar.png" alt=""/><span>MenuBar</span></a></li>
+								<li><a><img id="newSelectableActionSet" src="images/activematerials/selectable_action_set.png" alt=""/><br/><span>Menu</span></a></li>
+								<li><a><img id="newStartGoTo" src="images/tools/start_go_to.png" alt=""/><span>MenuItem</span></a></li>							
+							</ul>
+						</li>
+						<li>
+							<a href="#"><p class="rotate">Data AIO</p></a>
+							<ul class="cbp-hssubmenu">
+								<li><a><img id="newInputAccepter" src="images/activematerials/input_accepter.png" alt=""/><br/><span>Input Only</span></a></li>      
+								<li><a><img id="newEditableElement" src="images/activematerials/editable_element.png" alt=""/><br/><span>Editting</span></a></li> 
+								<li><a><img id="newElement" src="images/materials/element.png" alt=""/><br/><span>Output Only</span></a></li>  
+								<li><a><img id="newNotification" src="images/materials/notification.png" alt=""/><br/><span>System Message (OutputResultSpace)</span></a></li>                             
+							</ul>
+						</li>
+						<li>
+							<a href="#"><p class="rotate">Action AIO</p></a>
+							<ul class="cbp-hssubmenu">
+							<!--	<li><a><img id="newActionOperation" src="images/tools/action_operation.png" alt=""/><span>ActionAIO</span></a></li> -->
+								<br/><b>UIOperation</b>
+								<li><a><img id="newStopEndComplete" src="images/tools/stop_end_complete.png" alt=""/><span>CancelOp</span></a></li>
+								<li><a><img id="newStopEndComplete2" src="images/tools/stop_end_complete.png" alt=""/><br/><span>CloseOp</span></a></li>
+								<li><a><img id="newSelect" src="images/tools/select.png" alt=""/><span>SelectOKOp</span></a></li>
+								<b>Navigation</b>
+								<!--<li><a><img id="newStartGoTo" src="images/tools/start_go_to.png" alt=""/><span>Navigation</span></a></li> -->
+								<li><a><img id="newStartGoTo2" src="images/tools/start_go_to.png" alt=""/><span>ToCreateInstance</span></a></li>
+								<li><a><img id="newStartGoTo3" src="images/tools/start_go_to.png" alt=""/><span>ToUpdateInstance</span></a></li>
+								<li><a><img id="newView" src="images/tools/view.png" alt=""/><span>ToViewInstance</span></a></li>								
+								<b>DOMAIN OPERATIONS<br>
+								CallCRUDOp</b>
+								<li><a><img id="newCreate" src="images/tools/create.png" alt=""/><span>CallCreateOp</span></a></li>
+								<li><a> <img id="newModify" src="images/tools/modify.png" alt=""/><span>CallUpdateOp</span></a></li>
+								<li><a><img id="newDeleteErase" src="images/tools/delete_erase.png" alt=""/><span>CallDeleteOp</span></a></li> 
+								<li><a><img id="newView2" src="images/tools/view.png" alt=""/><span>CallRetrieveOp</span></a></li>
+								<li><a> <img id="newModify2" src="images/tools/modify.png" alt=""/><span>CallLinkOp</span></a></li>
+								<li><a> <img id="newModify3" src="images/tools/modify.png" alt=""/><span>CallUnlinkOp</span></a></li>
+								
+								<li><a><img id="newPerform" src="images/tools/perform.png" alt=""/><br/><span>CallOp</span></a></li>
+								<!--
+								<li><a><img id="newActiveMaterial" src="images/activematerials/active_material.png" alt=""/><span>Active Material</span></a></li>                                                       						                                                               
+								<li><a><img id="newEditableCollection" src="images/activematerials/editable_collection.png" alt=""/><span>Editable Collection</span></a></li>                                                                
+								<li><a><img id="newSelectableViewSet" src="images/activematerials/selectable_view_set.png" alt=""/><span>Selectable View Set</span></a></li>
+								
+
+								<li><a><img id="newDuplicate" src="images/tools/duplicate.png" alt=""/><span>Duplicate</span></a></li>                                                                
+								<li><a><img id="newMove" src="images/tools/move.png" alt=""/><span>Move</span></a></li>
+								<li><a><img id="newToggle" src="images/tools/toggle.png" alt=""/><span>Toggle</span></a></li>
+								-->                                                          
+							</ul>
+						</li>
+					</ul>
+					<a class="myBtnCog" id="showRight" href="#"></a>
+				</div>
+			</nav>
+			
+            <canvas id="canvas" resize ></canvas>
+
+	<script type="text/paperscript" canvas="canvas">
+					
+
+			var hitOptions = {
+				segments: true,
+				//NOVO 09-06-2015 bounds
+				//bounds: true,
+				stroke: true,
+				fill: true,
+				tolerance: 5
+			};
+			
+			var text,segment,path;
+			var lastColor = '';
+			
+			function onMouseDown(event) {
+				if(segment)	segment.strokeColor = lastColor;
+				if(path)	path.strokeColor = lastColor;
+				if(text)	text.strokeColor = lastColor;
+				segment = path = text = null;
+				
+				var hitResult = project.hitTest(event.point, hitOptions	);
+				
+				if (!hitResult){
+					
+					reInicializa();
+					preencheCLAT();
+					return;
+					}
+
+				if (event.modifiers.shift) {
+					if (hitResult.type == 'segment') {
+						hitResult.segment.remove();
+						//alert("CHEGUEI AQUI - 0 - é SEGMENTO!!");
+					};
+					return;
+				}
+
+				if (hitResult) {
+					
+					path = hitResult.item;
+					path.selected = true;
+					lastColor = path.strokeColor;
+					path.strokeColor = 'red';
+					
+					//NOVO 
+					//Guarda a posição do rato quando clica no canto inferior direto do item???
+					
+				/*	if (hitResult.type == 'bounds' && hitResult.name == 'bottom-right') {
+						//path.parent.locked = true;
+						var pontoi = new paper.Point(event.point);
+						
+						path.parent.width = pontoi.x - path.parent.x;
+						path.parent.height = pontoi.y - path.parent.y;
+												
+						path.strokeColor = 'black';
+					} */
+                    preencheValores(path.parent);
+				}
+				//Novo
+				/*
+				movePath = hitResult.type == 'fill';
+				if (movePath)
+					project.activeLayer.addChild(hitResult.item);*/
+				//FIM Novo
+				
+				
+			}
+
+			function onMouseMove(event) {
+				project.activeLayer.selected = false;
+                               	if (event.item)
+					event.item.selected = true;
+					
+			}
+			
+			function onMouseDrag(event) {
+
+                if (path) {
+	
+					path.parent.position += event.delta;
+
+					preencheValores(path.parent);
+				}
+			}
+			
+			//NOVO 09-07
+			/*
+			function onMouseUp(event){
+			
+				var hitResult = project.hitTest(event.point, hitOptions	);
+			
+			if (path){
+				var pontof = new paper.Point(event.point);
+				
+				
+				
+				preencheValores(path.parent);
+				}
+					//Novo
+				
+				movePath = hitResult.type == 'fill';
+				if (movePath)
+					project.activeLayer.addChild(hitResult.item);
+				//FIM Novo
+			}*/
+			
+
+
+			var btnEliminar = document.getElementById( 'btn_apagar' );
+           
+ 		    btnEliminar.onclick = function(){
+                if(path) apagaME(path.parent);
+            };
+
+            var btnAlterar = document.getElementById( 'btn_alterar' );
+            
+			btnAlterar.onclick = function(){
+
+                if(path) mudaME(path.parent);
+            };
+	</script>	
+        
+        
+        <div id="gravar" class="col_dir">
+            <div>
+                <h3>Guardar UIM (XML)</h3>
+                <p>Nome do Ficheiro <input id="txtFileName" type="text" placeholder="Nome para o ficheiro" /></p>
+                <input id="btnCancelarDisco" type="button" value="Cancelar"/>
+                <input id="btnGravarDisco" type="button" value="Gravar" />
+            </div>
+        </div>
+        
+        <div id="abrir" class="col_dir">
+                <div>
+                        <h3> Selecione CAP para Abrir</h3>
+                        <input type="file" id="ficheiroCAP" />
+                        <input id="btnCancelarAbrir" type="button" value="Cancelar" />
+                </div>
+        </div>
+		
+		<div id="abrirMD" class="col_dir">
+                <div>
+                        <h3> Selecione DM (XML)</h3>
+                        <input type="file" id="ficheiroDM" />
+                        <input id="btnCancelarMD" type="button" value="Cancelar" />
+                </div>
+        </div>
+        
+        
+        <div id="exportar" class="col_dir">
+            <div>
+                <h3>Guardar UIM (XML)</h3>
+                <p>Nome do Ficheiro <input id="txtFileNameExp" type="text" placeholder="Nome para o ficheiro" /></p>
+                <input id="btnCancelarExp" type="button" value="Cancelar"/>
+                <input id="btnGravarExp" type="button" value="Gravar" />
+            </div>
+        </div>
+        
+        <div id="importar" class="col_dir">
+                <div>
+                        <h3> Abrir UIM (XML)</h3>
+                        <input type="file" id="ficheiroXML" />
+                        <input id="btnCancelarImp" type="button" value="Cancelar" />
+                </div>
+        </div>
+		
+		<div id="confirmar" class="col_dir">
+                <div>
+                        <h3>Pretende guardar o UIM?</h3>
+						<input id="btnSim" type="button" value="Sim" />
+                        <input id="btnNao" type="button" value="Não" />
+                </div>
+        </div>
+		
+		<div id="aviso_cl" class="col_dir">
+                <div>
+                        <h3>ATENÇÃO<br>Selecione a Classe e/ou atributo associados ao InteractionSpace/DataAIO/ActionAIO! </h3>
+						<input id="btnOKCL" type="button" value="OK" />
+                </div>
+        </div>
+		
+		<div id="addDM" class="col_dir">
+                <div>
+                        <h3>ATENÇÃO<br>Este UIM não tem um DM associado!</h3>
+						<input id="btnOKDM" type="button" value="OK" />
+                </div>
+        </div>
+		
+		<div id="form_invalido" class="col_dir">
+                <div>
+                        <h3>ATENÇÃO<br>Formato de ficheiro inválido!</h3>
+						<input id="btnOKFI" type="button" value="OK" />
+                </div>
+        </div>
+		<div id="sobre" class="col_dir">
+                <div>
+                        <h3><p>MetaCAP v1.0</p>Mestrado em Engenharia de <i>Software</i><br>ESTG - IPVC<br>
+						Célia Sousa N.º 14024<br>
+						Maio de 2015
+						
+						</h3>
+						<input id="btnSB" type="button" value="OK" />
+                </div>
+        </div>
+        
+	</body>
+	<script src="js/classie.js"></script>
+</html>

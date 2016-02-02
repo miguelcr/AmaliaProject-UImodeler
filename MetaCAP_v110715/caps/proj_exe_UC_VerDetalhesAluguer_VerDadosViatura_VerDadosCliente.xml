@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UIM nome ='proj_exe_UC_VerDetalhesAluguer_VerDadosViatura_VerDadosCliente' dm ='rentAcar.xml'>
+<InteractionSpace id='interactionspace1' text='Ver Detalhes Aluguer' x='148' y='62.99999999999998' w='730' h='580' classe='Aluguer'>
+</InteractionSpace> 
+<ViewEntity id='viewentity2' text='Aluguer' x='172.00000000000003' y='126' w='660' h='210' classe='Aluguer'>
+</ViewEntity> 
+<OutputOnly id='outputonly4' text='nome' x='445' y='413' w='200' h='60' classe='Cliente' atributo='nome'>
+</OutputOnly> 
+<OutputOnly id='outputonly5' text='morada' x='446' y='481' w='200' h='60' classe='Cliente' atributo='morada'>
+</OutputOnly> 
+<OutputOnly id='outputonly6' text='localidade' x='446' y='549' w='200' h='60' classe='Cliente' atributo='localidade'>
+</OutputOnly> 
+<OutputOnly id='outputonly7' text='data prevista inicio' x='233' y='180' w='200' h='60' classe='Aluguer' atributo='data_prevista_inicio'>
+</OutputOnly> 
+<OutputOnly id='outputonly8' text='data prevista fim' x='232' y='247' w='200' h='60' classe='Aluguer' atributo='data_prevista_fim'>
+</OutputOnly> 
+<OutputOnly id='outputonly9' text='data inicio' x='439' y='181' w='200' h='60' classe='Aluguer' atributo='data_inicio'>
+</OutputOnly> 
+<OutputOnly id='outputonly10' text='data fim' x='439' y='248' w='200' h='60' classe='Aluguer' atributo='data_fim'>
+</OutputOnly> 
+<OutputOnly id='outputonly11' text='nif' x='655' y='481' w='200' h='60' classe='Cliente' atributo='nif'>
+</OutputOnly> 
+<OutputOnly id='outputonly12' text='telefone' x='655' y='413' w='200' h='60' classe='Cliente' atributo='telefone'>
+</OutputOnly> 
+<ViewRelatedEntity id='viewrelatedentity3' text='Viatura' x='162.00000000000003' y='352' w='260' h='270' classe='Viatura'>
+</ViewRelatedEntity> 
+<ViewRelatedEntity id='viewrelatedentity4' text='Cliente' x='434' y='352' w='430' h='270' classe='Cliente'>
+</ViewRelatedEntity> 
+<OutputOnly id='outputonly10' text='matrícula' x='173' y='550' w='200' h='60' classe='Viatura' atributo='matricula'>
+</OutputOnly> 
+<OutputOnly id='outputonly11' text='modelo' x='174' y='482' w='200' h='60' classe='Viatura' atributo='modelo'>
+</OutputOnly> 
+<OutputOnly id='outputonly12' text='marca' x='174' y='413' w='200' h='60' classe='Viatura' atributo='marca'>
+</OutputOnly> 
+</UIM>

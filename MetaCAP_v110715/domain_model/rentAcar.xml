@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="AMALIA_MOBILE_0.1">
+	<name>rentAcar.proj</name>
+	<use_case_diagram empty="false">
+		<elements>
+			<element id="9acfbbaa-d2fa-4f39-b429-5f950880cd5c">
+				<type>use case</type>
+				<name>Listar Viaturas</name>
+				<operations>
+					<operation>list</operation>
+				</operations>
+				<entity>Viatura</entity>
+			</element>
+			<element id="fce63cf8-a944-42ca-8994-c4d33781a152">
+				<type>use case</type>
+				<name>Criar Viatura</name>
+				<operations>
+					<operation>create</operation>
+				</operations>
+				<entity>Viatura</entity>
+			</element>
+			<element id="f09611dd-daac-470a-b302-76cd5c991cff">
+				<type>use case</type>
+				<name>Editar Viatura</name>
+				<operations>
+					<operation>update</operation>
+					<operation>delete</operation>
+				</operations>
+				<entity>Viatura</entity>
+			</element>
+			<element id="674a6370-d0c0-41f1-891d-eee98c00d57f">
+				<type>use case</type>
+				<name>Ver Detalhes Viatura</name>
+				<operations>
+					<operation>read</operation>
+				</operations>
+				<entity>Viatura</entity>
+			</element>
+			<element id="63915d45-7fd1-493b-ab9d-eabf465ba886">
+				<type>actor</type>
+				<name>Funcionário</name>
+			</element>
+			<element id="334ce6b1-76cd-4719-acf2-16144bc70155">
+				<type>use case</type>
+				<name>Listar Alugueres da Viatura</name>
+				<operations>
+					<operation>list</operation>
+				</operations>
+				<entity>Aluguer</entity>
+				<masterEntity>Viatura</masterEntity>
+			</element>
+			<element id="e1c028b2-2c14-4939-9728-28fb9b97e542">
+				<type>use case</type>
+				<name>Criar Novo Cliente</name>
+				<operations>
+					<operation>create</operation>
+				</operations>
+				<entity>Cliente</entity>
+			</element>
+			<element id="fd5cd70a-5574-4e34-991a-e0222aad3695">
+				<type>use case</type>
+				<name>Listar Clientes</name>
+				<operations>
+					<operation>list</operation>
+				</operations>
+				<entity>Cliente</entity>
+			</element>
+			<element id="f3676c7a-0e9d-4acf-85c6-dc5590ac1bf3">
+				<type>use case</type>
+				<name>Editar Cliente</name>
+				<operations>
+					<operation>update</operation>
+					<operation>delete</operation>
+				</operations>
+				<entity>Cliente</entity>
+			</element>
+			<element id="b159d631-89c9-483f-946d-96aacb4d9ecc">
+				<type>use case</type>
+				<name>Ver Detalhes Cliente</name>
+				<operations>
+					<operation>read</operation>
+				</operations>
+				<entity>Cliente</entity>
+			</element>
+			<element id="5661f951-bc0f-4262-bddc-35df0f82b26c">
+				<type>use case</type>
+				<name>Listar Alugueres do Cliente</name>
+				<operations>
+					<operation>list</operation>
+				</operations>
+				<entity>Aluguer</entity>
+				<masterEntity>Cliente</masterEntity>
+			</element>
+			<element id="b5832e25-ec0e-465e-8450-a1adb17de844">
+				<type>use case</type>
+				<name>Criar Aluguer</name>
+				<operations>
+					<operation>create</operation>
+				</operations>
+				<entity>Aluguer</entity>
+			</element>
+			<element id="13bc5cea-8ce3-446c-8249-847ebdf320e8">
+				<type>use case</type>
+				<name>Listar Alugueres</name>
+				<operations>
+					<operation>list</operation>
+				</operations>
+				<entity>Aluguer</entity>
+			</element>
+			<element id="d75f513c-d825-47c7-adc5-506c9a34c691">
+				<type>use case</type>
+				<name>Alterar Aluguer</name>
+				<operations>
+					<operation>update</operation>
+					<operation>delete</operation>
+				</operations>
+				<entity>Aluguer</entity>
+			</element>
+			<element id="4f8ed17f-52d7-49d0-a596-a05e0484765b">
+				<type>use case</type>
+				<name>Ver Detalhes Aluguer</name>
+				<operations>
+					<operation>read</operation>
+				</operations>
+				<entity>Aluguer</entity>
+			</element>
+			<element id="cd8789d5-8ef4-4b47-96eb-a048f81fbf45">
+				<type>use case</type>
+				<name>Ver Dados da Viatura</name>
+				<operations>
+					<operation>read</operation>
+				</operations>
+				<entity>Viatura</entity>
+				<masterEntity>Aluguer</masterEntity>
+			</element>
+			<element id="666ea3d7-8d03-4cb2-b742-cde2aab5ae59">
+				<type>use case</type>
+				<name>Ver Dados do Cliente</name>
+				<operations>
+					<operation>read</operation>
+				</operations>
+				<entity>Cliente</entity>
+				<masterEntity>Aluguer</masterEntity>
+			</element>
+		</elements>
+		<connections>
+			<connection id="3cb2e7ee-357f-4530-b7dc-0f23f976334b">
+				<type>association</type>
+				<source_id>fce63cf8-a944-42ca-8994-c4d33781a152</source_id>
+				<destination_id>63915d45-7fd1-493b-ab9d-eabf465ba886</destination_id>
+			</connection>
+			<connection id="5d3abc90-36e7-4922-ab00-e85df4cd314d">
+				<type>association</type>
+				<source_id>9acfbbaa-d2fa-4f39-b429-5f950880cd5c</source_id>
+				<destination_id>63915d45-7fd1-493b-ab9d-eabf465ba886</destination_id>
+			</connection>
+			<connection id="f7ccad33-223c-4e8c-b64b-686422e7fdb9">
+				<type>extend</type>
+				<source_id>674a6370-d0c0-41f1-891d-eee98c00d57f</source_id>
+				<destination_id>9acfbbaa-d2fa-4f39-b429-5f950880cd5c</destination_id>
+			</connection>
+			<connection id="cf73dcb9-0001-4980-bc6c-b49c6e73cf32">
+				<type>extend</type>
+				<source_id>f09611dd-daac-470a-b302-76cd5c991cff</source_id>
+				<destination_id>9acfbbaa-d2fa-4f39-b429-5f950880cd5c</destination_id>
+			</connection>
+			<connection id="473b5512-8311-4d7a-805d-cf86839c7fc3">
+				<type>include</type>
+				<source_id>674a6370-d0c0-41f1-891d-eee98c00d57f</source_id>
+				<destination_id>334ce6b1-76cd-4719-acf2-16144bc70155</destination_id>
+			</connection>
+			<connection id="ce7912d8-007e-4728-84bd-b91b9582b90a">
+				<type>association</type>
+				<source_id>fd5cd70a-5574-4e34-991a-e0222aad3695</source_id>
+				<destination_id>63915d45-7fd1-493b-ab9d-eabf465ba886</destination_id>
+			</connection>
+			<connection id="8521add3-f422-49f3-ba5c-d7091267976b">
+				<type>association</type>
+				<source_id>e1c028b2-2c14-4939-9728-28fb9b97e542</source_id>
+				<destination_id>63915d45-7fd1-493b-ab9d-eabf465ba886</destination_id>
+			</connection>
+			<connection id="0710fb0b-1815-4c2c-a93a-eee34b98542d">
+				<type>extend</type>
+				<source_id>f3676c7a-0e9d-4acf-85c6-dc5590ac1bf3</source_id>
+				<destination_id>fd5cd70a-5574-4e34-991a-e0222aad3695</destination_id>
+			</connection>
+			<connection id="a4bc755f-edd8-46c7-8b7f-909ef3309323">
+				<type>extend</type>
+				<source_id>b159d631-89c9-483f-946d-96aacb4d9ecc</source_id>
+				<destination_id>fd5cd70a-5574-4e34-991a-e0222aad3695</destination_id>
+			</connection>
+			<connection id="a554423d-6138-4bb5-af94-764659ebfabb">
+				<type>include</type>
+				<source_id>b159d631-89c9-483f-946d-96aacb4d9ecc</source_id>
+				<destination_id>5661f951-bc0f-4262-bddc-35df0f82b26c</destination_id>
+			</connection>
+			<connection id="c383eaad-ffa8-495f-8f37-103f43cb06b3">
+				<type>association</type>
+				<source_id>13bc5cea-8ce3-446c-8249-847ebdf320e8</source_id>
+				<destination_id>63915d45-7fd1-493b-ab9d-eabf465ba886</destination_id>
+			</connection>
+			<connection id="4e19d2e8-25d0-45c9-a92e-1ad537c5a051">
+				<type>association</type>
+				<source_id>b5832e25-ec0e-465e-8450-a1adb17de844</source_id>
+				<destination_id>63915d45-7fd1-493b-ab9d-eabf465ba886</destination_id>
+			</connection>
+			<connection id="7cc19cda-cfd6-40b0-8173-2f758d8b7bf1">
+				<type>extend</type>
+				<source_id>d75f513c-d825-47c7-adc5-506c9a34c691</source_id>
+				<destination_id>13bc5cea-8ce3-446c-8249-847ebdf320e8</destination_id>
+			</connection>
+			<connection id="ea52c44f-2e35-405b-a643-51bab16a7657">
+				<type>extend</type>
+				<source_id>4f8ed17f-52d7-49d0-a596-a05e0484765b</source_id>
+				<destination_id>13bc5cea-8ce3-446c-8249-847ebdf320e8</destination_id>
+			</connection>
+			<connection id="27bee3e3-72c9-4ea3-855a-4b67fe9c85db">
+				<type>include</type>
+				<source_id>4f8ed17f-52d7-49d0-a596-a05e0484765b</source_id>
+				<destination_id>666ea3d7-8d03-4cb2-b742-cde2aab5ae59</destination_id>
+			</connection>
+			<connection id="146eb054-ac88-4796-88cb-c81e56488594">
+				<type>include</type>
+				<source_id>4f8ed17f-52d7-49d0-a596-a05e0484765b</source_id>
+				<destination_id>cd8789d5-8ef4-4b47-96eb-a048f81fbf45</destination_id>
+			</connection>
+		</connections>
+	</use_case_diagram>
+	<domain_model>
+		<elements>
+			<element id="eedc91a4-79fd-462e-9910-b6fa8dae5926">
+				<type>class</type>
+				<name>Aluguer</name>
+				<attributes>
+					<attribute visibility="private" type="string">data_prevista_inicio</attribute>
+					<attribute visibility="private" type="string">data_prevista_fim</attribute>
+					<attribute visibility="private" type="string">data_inicio</attribute>
+					<attribute visibility="private" type="string">data_fim</attribute>
+				</attributes>
+			</element>
+			<element id="63b8a911-7911-4f26-a6dd-cd36ac67d95c">
+				<type>class</type>
+				<name>Viatura</name>
+				<attributes>
+					<attribute visibility="private" type="string">marca</attribute>
+					<attribute visibility="private" type="string">modelo</attribute>
+					<attribute visibility="private" type="string">matricula</attribute>
+				</attributes>
+			</element>
+			<element id="808398ac-0d49-4d49-a5b9-6e8f7ceda57c">
+				<type>class</type>
+				<name>Cliente</name>
+				<attributes>
+					<attribute visibility="private" type="string">nome</attribute>
+					<attribute visibility="private" type="string">morada</attribute>
+					<attribute visibility="private" type="string">localidade</attribute>
+					<attribute visibility="private" type="string">telefone</attribute>
+					<attribute visibility="private" type="string">nif</attribute>
+				</attributes>
+			</element>
+		</elements>
+		<connections>
+			<connection id="b0f8e2fe-05e6-4e82-a208-5c1668685b51">
+				<type>association</type>
+				<cardinality_destination>*</cardinality_destination>
+				<cardinality_source>1</cardinality_source>
+				<source_id>63b8a911-7911-4f26-a6dd-cd36ac67d95c</source_id>
+				<destination_id>eedc91a4-79fd-462e-9910-b6fa8dae5926</destination_id>
+			</connection>
+			<connection id="3c6c7d2d-f1c3-4152-9e54-d7637fa7a9ca">
+				<type>association</type>
+				<cardinality_destination>*</cardinality_destination>
+				<cardinality_source>1</cardinality_source>
+				<source_id>808398ac-0d49-4d49-a5b9-6e8f7ceda57c</source_id>
+				<destination_id>eedc91a4-79fd-462e-9910-b6fa8dae5926</destination_id>
+			</connection>
+		</connections>
+	</domain_model>
+</project>

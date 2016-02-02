@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UIM nome ='exemplo_3_proj' dm ='carRent.xml'>
+<InteractionSpace id='interactionspace3' text='InteractionSpace' x='253.00000000000006' y='135' w='700' h='400' classe='Cliente'>
+</InteractionSpace> 
+<ViewRelatedEntity id='viewrelatedentity4' text='Cliente' x='614' y='157' w='300' h='350' classe='Cliente'>
+</ViewRelatedEntity> 
+<ViewEntity id='viewentity5' text='Aluguer' x='289' y='200' w='300' h='300' classe='Aluguer'>
+</ViewEntity> 
+<OutputOnly id='outputonly3' text='dataInicio' x='327' y='266' w='200' h='60' classe='Aluguer' atributo='dataInicio'>
+</OutputOnly> 
+<OutputOnly id='outputonly4' text='dataPrevfim' x='328' y='338' w='200' h='60' classe='Aluguer' atributo='dataPrevFim'>
+</OutputOnly> 
+<OutputOnly id='outputonly6' text='nome' x='646' y='220' w='200' h='60' classe='Cliente' atributo='nome'>
+</OutputOnly> 
+<OutputOnly id='outputonly7' text='morada' x='647' y='290' w='200' h='60' classe='Cliente' atributo='morada'>
+</OutputOnly> 
+<OutputOnly id='outputonly8' text='localidade' x='647' y='359' w='200' h='60' classe='Cliente' atributo='localidade'>
+</OutputOnly> 
+<OutputOnly id='outputonly9' text='numFiscal' x='647' y='428' w='200' h='60' classe='Cliente' atributo='numFiscal'>
+</OutputOnly> 
+<OutputOnly id='outputonly10' text='dataFim' x='327' y='407' w='200' h='60' classe='Aluguer' atributo='dataFim'>
+</OutputOnly> 
+</UIM>

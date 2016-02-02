@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UIM nome ='exemplo_1_proj' dm ='carRent.xml'>
+<InteractionSpace id='interactionspace1' text='InteractionSpace' x='226' y='109' w='600' h='300' classe='Aluguer'>
+</InteractionSpace> 
+<OutputOnly id='outputonly1' text='OutputOnly' x='298' y='243' w='170' h='60' classe='Aluguer' atributo='dataInicio'>
+</OutputOnly> 
+<OutputOnly id='outputonly2' text='OutputOnly' x='477' y='243' w='170' h='60' classe='Aluguer' atributo='dataPrevFim'>
+</OutputOnly> 
+<ViewList id='viewlist1' text='ViewList' x='272' y='179' w='400' h='200' classe='Aluguer'>
+</ViewList> 
+</UIM>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UIM nome ='proj_exe_UC_CriarViatura' dm ='rentAcar.xml'>
+<InteractionSpace id='interactionspace1' text='Criar Viatura' x='142' y='94.00000000000001' w='730' h='320' classe='Viatura'>
+</InteractionSpace> 
+<ViewEntity id='viewentity2' text='Viatura' x='179.00000000000003' y='165' w='660' h='150' classe='Viatura'>
+</ViewEntity> 
+<InputOnly id='inputonly1' text='marca' x='200' y='227' w='200' h='60' classe='Viatura' atributo='marca'>
+</InputOnly> 
+<InputOnly id='inputonly2' text='modelo' x='410' y='227' w='200' h='60' classe='Viatura' atributo='modelo'>
+</InputOnly> 
+<InputOnly id='inputonly3' text='matrícula' x='620' y='227' w='200' h='60' classe='Viatura' atributo='matricula'>
+</InputOnly> 
+<CallCreateOp id='callcreateop1' text='Criar Nova Viatura' x='639' y='334' w='200' h='60' classe='Viatura' operacao='CreateOp'>
+</CallCreateOp> 
+</UIM>
