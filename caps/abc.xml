@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UIM nome ='userinterfacemodel' dm ='undefined'>
+<InteractionSpace id='interactionspace1' text='InteractionSpace' x='420' y='100' w='600' h='600' classe=' '>
+</InteractionSpace> 
+<MenuBar id='menubar2' text='MenuBar' x='485' y='124.99999999999989' w='500' h='500.0000000000001' classe=' '>
+</MenuBar> 
+<Menu id='menu1' text='Menu' x='549' y='330' w='300' h='150' classe=' '>
+</Menu> 
+<MenuItem id='menuitem1' text='MenuItem' x='573' y='387' w='200' h='60' classe=''>
+</MenuItem> 
+<Menu id='menu2' text='Menu' x='546' y='145' w='300' h='150' classe=' '>
+</Menu> 
+<MenuItem id='menuitem2' text='MenuItem' x='590' y='213' w='200' h='60' classe=''>
+</MenuItem> 
+</UIM>
