@@ -6,10 +6,12 @@ Am√°lia Project is a R&D project taking place at the Higher School of Technology
 
 More info: https://sites.google.com/site/amaliaproject/
 
-Project Coordinator: Ant√≥nio Miguel Rosado da Cruz
+Project Coordinator: AntÛnio Miguel Rosado da Cruz
 
 UI modeler Tool
-Developer  V1.0, Jul 2015: C√©lia Sousa - Master of Software Engineering
+
+Developer  V1.0, Jul 2015: CÈlia Sousa - Master of Software Engineering
+
 Developers V1.1, Jan 2016: SÈrgio Goncalves and Francisco Goncalves - Informatics Engineering (Computer Science)
 
 January 2016
